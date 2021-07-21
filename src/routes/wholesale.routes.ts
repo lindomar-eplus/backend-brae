@@ -17,7 +17,7 @@ wholesaleRoutes.post('/register', async (request, response) => {
 			userId: companyData.email,
 			addressName: companyData.tradeName
 		})
-		return response.send()
+		return response.json({ message: 'ok' })
 	} catch (error) {
 		console.log(error)
 		if (error.message === 'Request failed with status code 304')
